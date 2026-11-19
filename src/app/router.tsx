@@ -66,9 +66,17 @@ function ProtectedAppLayout() {
   );
 }
 
+function resolveRouterBasename(): string {
+  const baseUrl = import.meta.env.BASE_URL || '/';
+  if (baseUrl === '/' || baseUrl === './') {
+    return '/';
+  }
+  return baseUrl.endsWith('/') ? baseUrl.slice(0, -1) : baseUrl;
+}
+
 export function AppRouter() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={resolveRouterBasename()}>
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/login" element={<AuthPage mode="login" />} />
