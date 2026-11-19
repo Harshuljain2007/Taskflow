@@ -1,0 +1,6 @@
+{
+  "name": "TaskFlow",
+  "description": "Project management and team collaboration SaaS platform for workspaces, tasks, Kanban boards, calendars, and real-time workflows.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
